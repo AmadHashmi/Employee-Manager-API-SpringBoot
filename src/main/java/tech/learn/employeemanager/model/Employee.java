@@ -90,7 +90,7 @@ public class Employee implements Serializable {
     public String toString(){
         return "Employee{" +
                 "id=" + id +
-                "name=" + name + 
+                "name=" + name +
                 "email=" + email +
                 "jobTitle=" + jobTitle +
                 "phone=" + phone +
