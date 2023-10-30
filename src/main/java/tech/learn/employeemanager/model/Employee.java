@@ -62,7 +62,7 @@ public class Employee implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public String getEmployeeCode() {
+    public String getEmployeeCode(String s) {
         return employeeCode;
     }
 
