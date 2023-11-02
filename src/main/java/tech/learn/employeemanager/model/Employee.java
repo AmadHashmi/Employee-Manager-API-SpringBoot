@@ -8,15 +8,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 @Entity
 public class Employee implements Serializable {
-    public Employee(Long id, String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.jobTitle = jobTitle;
-        this.phone = phone;
-        this.imageUrl = imageUrl;
-        this.employeeCode = employeeCode;
-    }
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,12 +30,28 @@ public class Employee implements Serializable {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
 
     public String getEmail() {
         return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public String getPhone() {
@@ -62,7 +70,7 @@ public class Employee implements Serializable {
         this.imageUrl = imageUrl;
     }
 
-    public String getEmployeeCode(String s) {
+    public String getEmployeeCode() {
         return employeeCode;
     }
 
@@ -70,21 +78,16 @@ public class Employee implements Serializable {
         this.employeeCode = employeeCode;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setEmail(String email) {
+    public Employee(){}
+    public Employee(Long id, String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode) {
+        this.id = id;
+        this.name = name;
         this.email = email;
-    }
-
-    public String getJobTitle() {
-        return jobTitle;
-    }
-    public void setJobTitle(String jobTitle) {
         this.jobTitle = jobTitle;
+        this.phone = phone;
+        this.imageUrl = imageUrl;
+        this.employeeCode = employeeCode;
     }
-
 
     @Override
     public String toString(){
